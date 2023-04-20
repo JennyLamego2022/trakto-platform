@@ -68,12 +68,12 @@ export class LoginComponent implements OnInit {
   textBtn = 'Entrar'
   botaoAtivo = true;
 
+
   trocarTexto(){
     if (this.momentForm.valid){
       this.textBtn = 'Entrando...';
       this.botaoAtivo = !this.botaoAtivo;
 
-      console.log(this.textBtn)
     }
   }
 }

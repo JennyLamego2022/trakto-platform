@@ -5,9 +5,11 @@
   --font-primary-color: #04183E;
   --font-secondary-color: #0095FF;
   --font-btn-color: #FFFFFF;
+  --font-error-color: #DC3545;
 
   --bg-login-color: #F5F5F5;
   --bg-btn-color: #1DC763;
+  --bg-btn-hover-color: #148945;
   --bg-input-color: #FFFFFF;
 
   --border-input-color: #E4EBFB;

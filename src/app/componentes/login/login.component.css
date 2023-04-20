@@ -23,8 +23,7 @@ figure img{
 .dados p{
   font-size: 1.25rem;
   font-weight: 700;
-
-  padding-top: 24px
+  padding-top: 1.5rem;
 }
 
 .dados label{
@@ -42,8 +41,7 @@ figure img{
   font-size: 0.875rem ;
   font-weight: 400;
   padding: 1rem;
-  /* margin-bottom: 1.5rem; */
-  cursor: pointer
+  cursor: pointer;
 }
 
 textarea:focus, input:focus{
@@ -71,11 +69,10 @@ textarea:focus, input:focus{
   justify-content: center;
   align-items: center;
   gap: 7.37px;
-
 }
 
 .btn button:hover{
-  background-color: #148945;
+  background-color: var(--bg-btn-hover-color);
 }
 
 .elipse{
@@ -98,7 +95,7 @@ textarea:focus, input:focus{
 }
 
 .validation-error .error {
-  color: #DC3545;
+  color: var(--font-error-color);
   margin-top: 0rem;
   font-size: 0.8rem;
   font-weight: 400;
