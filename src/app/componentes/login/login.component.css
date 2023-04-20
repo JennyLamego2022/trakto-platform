@@ -9,7 +9,6 @@ main{
 
 .container {
   width: 300px;
-  border: 1px solid red;
 }
 
 figure img{
@@ -25,7 +24,7 @@ figure img{
   font-size: 1.25rem;
   font-weight: 700;
 
-  padding: 24px 0;
+  padding-top: 24px
 }
 
 .dados label{
@@ -33,6 +32,7 @@ figure img{
   font-weight: 400;
   color: var(--font-primary-color);
   margin-bottom: 4px;
+  margin-top: 1.5rem;
 }
 
 .dados input{
@@ -42,7 +42,7 @@ figure img{
   font-size: 0.875rem ;
   font-weight: 400;
   padding: 1rem;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   cursor: pointer
 }
 
@@ -64,11 +64,44 @@ textarea:focus, input:focus{
   font-size: 0.875rem ;
   font-weight: 500;
   padding: 1rem;
-  margin-bottom: 1.5rem;
-  cursor: pointer
+  margin: 1.5rem 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7.37px;
 
 }
 
 .btn button:hover{
   background-color: #148945;
+}
+
+.elipse{
+  animation: girar-360 2s linear infinite;
+  display: none;
+}
+
+.elipse-ativo{
+  animation: girar-360 2s linear infinite;
+  display: block;
+}
+
+@keyframes girar-360 {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.validation-error .error {
+  color: #DC3545;
+  margin-top: 0rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  padding: 0 0 0 0.5rem;
 }

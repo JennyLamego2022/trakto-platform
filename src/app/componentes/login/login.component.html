@@ -1,5 +1,5 @@
 <main>
-  <div class="container">
+  <form action="" class="container" (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
     <figure>
       <img src="../../../assets/img/Logo.svg" alt="Logo Trakto">
     </figure>
@@ -7,12 +7,31 @@
       <p>Olá, faça login em sua conta.</p>
 
       <label for="input1" [style.color]="label1Color">E-mail</label>
-      <input type="text" id="='input1" (focus)="onInputFocus('input1')" (blur)="onInputBlur('input1')" placeholder="Digite seu melhor e-mail."  >
+      <input type="text" id="='input1"
+      (focus)="onInputFocus('input1')"
+      (blur)="onInputBlur('input1')"
+      formControlName="email"
+      required
+      placeholder="Digite seu melhor e-mail."  >
+
+      <div class="validation-error" *ngIf="email.invalid && formDir.submitted">
+        <p class="error" *ngIf="email.errors?.['required']">E-mail é obrigatório.</p>
+      </div>
+
       <label for="input2" [style.color]="label2Color">Senha</label>
-      <input type="password" id="='input" (focus)="onInputFocus('input2')" (blur)="onInputBlur('input2')" placeholder="Digite sua senha.">
+      <input type="password" id="='input"
+      (focus)="onInputFocus('input2')"
+      (blur)="onInputBlur('input2')"
+      formControlName="senha"
+      required
+      placeholder="Digite sua senha.">
+
+      <div class="validation-error" *ngIf="senha.invalid && formDir.submitted">
+        <p class="error" *ngIf="senha.errors?.['required']">Senha é obrigatória.</p>
+      </div>
     </section>
     <div class="btn">
-      <button type="submit">Entrar</button>
+      <button type="submit" (click)="trocarTexto()" ><img src = "../../../assets/img/Ellipse 1121.svg" alt="Elipse" class="elipse" [ngClass]="{'elipse': botaoAtivo, 'elipse-ativo': !botaoAtivo}">{{ textBtn }}</button>
     </div>
-  </div>
+  </form>
 </main>
