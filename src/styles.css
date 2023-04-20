@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+:root{
+  --font-family-primary: 'Roboto', sans-serif;
+  --font-primary-color: #04183E;
+  --font-secondary-color: #0095FF;
+  --font-btn-color: #FFFFFF;
+
+  --bg-login-color: #F5F5F5;
+  --bg-btn-color: #1DC763;
+  --bg-input-color: #FFFFFF;
+
+  --border-input-color: #E4EBFB;
+  --border-input-hover-color: #66AFFF;
+
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+}
