@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AberturaComponent } from './componentes/abertura/abertura.component';
+import { HeaderComponent } from './componentes/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    AberturaComponent
+    AberturaComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './componentes/login/login.component';
 import { AberturaComponent } from './componentes/abertura/abertura.component';
+import { HeaderComponent } from './componentes/header/header.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'abertura',
     component: AberturaComponent
+  },
+  {
+    path: 'header',
+    component: HeaderComponent
   }
 ];
 

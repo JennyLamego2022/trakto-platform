@@ -6,12 +6,14 @@
   --font-secondary-color: #0095FF;
   --font-btn-color: #FFFFFF;
   --font-error-color: #DC3545;
+  --font-header-light-color: #E4EBFB;
 
   --bg-login-color: #F5F5F5;
   --bg-btn-color: #1DC763;
   --bg-btn-hover-color: #148945;
   --bg-input-color: #FFFFFF;
   --bg-abertura-color: #1D1B1B;
+  --bg-header-dark-color: #252323;
 
   --border-input-color: #E4EBFB;
   --border-input-hover-color: #66AFFF;
@@ -20,6 +22,7 @@
   --line-title2-color: #1DC763;
   --line-title3-color: #F6B5FF;
   --line-title4-color: #FF0000;
+  --line-hr-color: #E4EBFB;
 
 }
 
