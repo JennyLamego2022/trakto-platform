@@ -1,0 +1,74 @@
+main{
+  width: 100%;
+  height: 100vh;
+  background:url(../../../assets/img/bg-abertura.png),var(--bg-abertura-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: row;
+  gap:6.1875rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4.75rem;
+  padding-left: 6.625rem;
+  padding-right: 4.9375rem;
+}
+
+.acao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.acao h1{
+  width: 100%;
+  color:var(--font-btn-color);
+  padding-bottom: 2.25rem ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 130%;
+  font-size: 2rem;
+}
+
+.title1::after{
+  content: " ";
+  display: block;
+  border-bottom:  4px solid var(--line-title1-color);
+  width: 28px;
+}
+
+.title2::after{
+  content: " ";
+  display: block;
+  border-bottom:  4px solid var(--line-title2-color);
+  width: 28px;
+}
+
+.title3::after{
+  content: " ";
+  display: block;
+  border-bottom:  4px solid var(--line-title3-color);
+  width: 28px;
+}
+
+.title4::after{
+  content: " ";
+  display: block;
+  border-bottom:  4px solid var(--line-title4-color);
+  width: 28px;
+}
+
+a{
+  display: flex;
+}
+
+.acao img{
+  width: 100%;
+}
