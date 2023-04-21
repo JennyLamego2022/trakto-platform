@@ -1,26 +1,24 @@
 @media (max-width: 1450px){
   .container{
-    gap: 5rem;
+    gap: 4.5rem;
+  }
+  .acao h1{
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 1400px){
   .container{
-    gap: 4rem;
+    gap: 3rem;
   }
   .acao h1{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 1010px){
-  .container{
-    gap: 3rem;
-  }
-  .acao h1{
-    font-size: 1.3rem;
-    border: 1px solid white;
-
+   .acao h1{
+    font-size: 1rem;
   }
 }
 

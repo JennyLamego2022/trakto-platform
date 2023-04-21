@@ -35,6 +35,8 @@ main{
   align-items: center;
   line-height: 130%;
   font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
 }
 
 .title1::after{
