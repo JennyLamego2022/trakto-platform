@@ -4,6 +4,7 @@ main{
   background:url(../../../assets/img/bg-abertura.png),var(--bg-abertura-color);
   background-size: cover;
   background-repeat: no-repeat;
+  position:relative;
 }
 
 .container{
@@ -14,9 +15,9 @@ main{
   gap:6.1875rem;
   justify-content: center;
   align-items: center;
-  padding-top: 4.75rem;
   padding-left: 6.625rem;
   padding-right: 4.9375rem;
+ 
 }
 
 .acao{

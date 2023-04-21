@@ -7,20 +7,24 @@ import { LoginComponent } from './componentes/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AberturaComponent } from './componentes/abertura/abertura.component';
 import { HeaderComponent } from './componentes/header/header.component';
+import { DatePipe } from '@angular/common';
+import { MaterialDidaticoComponent } from './componentes/material-didatico/material-didatico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AberturaComponent,
-    HeaderComponent
+    HeaderComponent,
+    MaterialDidaticoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DatePipe
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

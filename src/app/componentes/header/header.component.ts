@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,9 +10,16 @@ export class HeaderComponent {
 
   botaoAtivo = true;
 
-
   dropdownToggle(){
     this.botaoAtivo = !this.botaoAtivo;
     console.log("ok")
   }
+
+
+  today: any;
+
+  constructor(private datePipe: DatePipe){
+    this.today = this.datePipe.transform(new Date(), 'dd/MM/yyyy');
+  }
+
 }
