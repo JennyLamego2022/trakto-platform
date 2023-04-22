@@ -1,9 +1,10 @@
 main{
-  width: 100%;
+  width: 100vw;
   height: 4.75rem;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .container{
@@ -13,7 +14,7 @@ main{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
+
 }
 
 .logo{

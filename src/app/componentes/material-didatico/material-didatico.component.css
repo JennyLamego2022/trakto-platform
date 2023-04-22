@@ -1,5 +1,5 @@
 main{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: var(--bg-login-color);
 }
@@ -24,11 +24,12 @@ main{
   left: 4rem;
   right: 4rem;
   padding-bottom: 4rem;
+  margin-top: 2rem;
 }
 
 .banner{
   width: auto;
-  height:36.5rem;
+  max-height:39vh;
 
   background: url(../../../assets/img/bg_Group.svg),
   radial-gradient(51.99% 51.99% at 64.17% 37.22%, rgba(85, 230, 186, 0.639) 0%, rgba(193, 229, 255, 0) 68.67%),
@@ -45,7 +46,7 @@ main{
 
 
 .texto{
-  width: 48.375rem;
+  max-width: 48.375rem;
   height: 15.125rem;
   color: var(--font-btn-color);
   display: flex;
@@ -53,6 +54,7 @@ main{
   gap: 1rem;
   margin: 9.5rem;
   margin-top: 9.5rem;
+  border: 1px solid black
 }
 
 .title{
@@ -74,25 +76,33 @@ main{
 
 figure{
   width: auto;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-right: 10.125rem;
   position: relative;
+  border: 1px solid black;
+  /* background-color: antiquewhite; */
+  /* display:none */
 }
 
 .indicacao{
- width: auto;
+ width: 100%;
+ height: auto;
  display: flex;
  flex-direction: column;
  align-items: end;
  padding-top: 19.6875rem;
  position: absolute;
- left: -335px;
+ right: 583px;
+ border:1px solid red;
+ /* background-color: antiquewhite; */
 }
 
 .indicacao img:nth-child(1){
   position: relative;
+  border:1px solid red;
 }
 
 .indicacao img:nth-child(2){
@@ -101,9 +111,19 @@ figure{
   position: absolute;
   bottom: -52px;
   right: 39.62px;
+  border:1px solid red;
 }
 
 .pessoa{
+  max-width:452px ;
+  height: auto;
   right: 0;
+  border:1px solid red;
+  /* background-color: yellow; */
+}
+
+.pessoa img{
+  width: auto;
+  height: auto;
 }
 
