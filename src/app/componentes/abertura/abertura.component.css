@@ -17,7 +17,7 @@ main{
   align-items: center;
   padding-left: 6.625rem;
   padding-right: 4.9375rem;
- 
+
 }
 
 .acao{
@@ -37,7 +37,7 @@ main{
   line-height: 130%;
   font-size: 2rem;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family-secondary);
 }
 
 .title1::after{

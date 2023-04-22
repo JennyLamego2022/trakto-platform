@@ -2,6 +2,7 @@
 
 :root{
   --font-family-primary: 'Roboto', sans-serif;
+  --font-family-secondary: 'Poppins', sans-serif;
   --font-primary-color: #04183E;
   --font-secondary-color: #0095FF;
   --font-btn-color: #FFFFFF;
@@ -14,6 +15,7 @@
   --bg-input-color: #FFFFFF;
   --bg-abertura-color: #1D1B1B;
   --bg-header-dark-color: #252323;
+  --bg-material-color: #EFF2F9;
 
   --border-input-color: #E4EBFB;
   --border-input-hover-color: #66AFFF;

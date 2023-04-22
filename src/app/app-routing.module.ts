@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './componentes/login/login.component';
 import { AberturaComponent } from './componentes/abertura/abertura.component';
 import { HeaderComponent } from './componentes/header/header.component';
+import { MaterialDidaticoComponent } from './componentes/material-didatico/material-didatico.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'header',
     component: HeaderComponent
+  },
+  {
+    path: 'material',
+    component: MaterialDidaticoComponent
   }
 ];
 
