@@ -22,7 +22,8 @@ import { MaterialDidaticoComponent } from './componentes/material-didatico/mater
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    DatePipe
+    DatePipe,
+
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

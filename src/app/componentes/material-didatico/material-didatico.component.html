@@ -27,9 +27,9 @@
       <section class="material">
         <div class="header">
           <div class="info-header">
-            <p><button class="btn-data" >Semana 06/02 até 28/02</button>
-              <span class="material-symbols-outlined">chevron_left</span>
-              <span class="material-symbols-outlined">chevron_right</span>
+            <p ><button class="btn-data" >Semana 06/02 até 28/02</button>
+              <button (click)="offButtonClick()" class="material-symbols-outlined btn-cont">chevron_left</button>
+              <button (click)="onButtonClick()" class="material-symbols-outlined btn-cont">chevron_right</button>
             </p>
 
             <h1 class="title">Material didático</h1>
@@ -40,59 +40,60 @@
           </div>
         </div>
 
-        <div class="section-card">
+        <div class="section-card" #myScrollableElement style="overflow-x: scroll;">
 
               <div class="card">
                 <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
+                <figcaption>Aula 1: Fono-ortografia</figcaption>
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-2.svg" alt="Tela inicial do curso">
+                <figcaption>Aula 2: Fono-ortografia</figcaption>
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-3.svg" alt="Tela inicial do curso">
+                <figcaption>Aula 3: Fono-ortografia</figcaption>
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-4.svg" alt="Tela inicial do curso">
+                <figcaption>Aula 4: Fono-ortografia</figcaption>
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-5.svg" alt="Tela inicial do curso">
+                <figcaption>Aula 5: Fono-ortografia</figcaption>
               </div>
 
               <div class="card">
                 <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
+                <figcaption>Aula 6: Fono-ortografia</figcaption>
               </div>
 
               <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
+                <img src="assets/img/aula-2.svg" alt="Tela inicial do curso">
+                <figcaption>Aula 7: Fono-ortografia</figcaption>
               </div>
 
               <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
+                <img src="assets/img/aula-3.svg" alt="Tela inicial do curso">
+                <figcaption>Aula 8: Fono-ortografia</figcaption>
               </div>
 
               <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
+                <img src="assets/img/aula-4.svg" alt="Tela inicial do curso">
+                <figcaption>Aula 9: Fono-ortografia</figcaption>
               </div>
 
               <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <legend>Aula 1: Fono-ortografia</legend>
+                <img src="assets/img/aula-5.svg" alt="Tela inicial do curso">
+                <figcaption>Aula 10: Fono-ortografia</figcaption>
               </div>
         </div>
-
+        <!-- <div *ngFor="let item of this.items">
+          <p>{{items}}</p></div> -->
       </section>
       <section class="videos">
 
