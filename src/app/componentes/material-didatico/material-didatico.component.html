@@ -95,9 +95,71 @@
         <!-- <div *ngFor="let item of this.items">
           <p>{{items}}</p></div> -->
       </section>
-      <section class="videos">
+      <section class="material">
+        <div class="header">
+          <div class="info-header">
+            <p ><button class="btn-data" >Semana 06/02 até 28/02</button>
+              <button (click)="offButtonClick()" class="material-symbols-outlined btn-cont">chevron_left</button>
+              <button (click)="onButtonClick()" class="material-symbols-outlined btn-cont">chevron_right</button>
+            </p>
 
+            <h1 class="title">Video aulas</h1>
+            <p>Complemente os estudos assistindo o conteúdo de forma dinâmica.</p>
+          </div>
+          <div class="btn ">
+            <button id="btn-video"><img src="../../../assets/img/icon-video.svg" alt="Icone YouTube">
+              Abrir no Youtube
+            </button>
+
+          </div>
+        </div>
+
+        <div class="section-card" #myScrollableElement style="overflow-x: scroll;">
+
+              <div class="card">
+                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-2.svg" alt="Tela inicial do curso">
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-3.svg" alt="Tela inicial do curso">
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-4.svg" alt="Tela inicial do curso">
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-5.svg" alt="Tela inicial do curso">
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-2.svg" alt="Tela inicial do curso">
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-3.svg" alt="Tela inicial do curso">
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-4.svg" alt="Tela inicial do curso">
+              </div>
+
+              <div class="card">
+                <img src="assets/img/aula-5.svg" alt="Tela inicial do curso">
+              </div>
+        </div>
+        <!-- <div *ngFor="let item of this.items">
+          <p>{{items}}</p></div> -->
       </section>
+
     </div>
 
   </div>

@@ -90,6 +90,7 @@
   font-size: 16px;
   font-weight: 500;
   background-color: transparent;
+  cursor:pointer;
 }
 
 .section-card{
@@ -117,6 +118,15 @@
   font-weight: 600;
   color: #354564;
 
+}
+
+
+#btn-video{
+  display:flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #FF0100;
+  color: #FF0100;
 }
 
 
