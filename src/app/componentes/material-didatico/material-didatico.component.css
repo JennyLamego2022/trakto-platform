@@ -36,7 +36,7 @@ main{
   width: auto;
   height:auto;
 
-  background: url(../../../assets/img/bg_Group.svg),
+  background: url(/assets/img/bg_Group.svg),
   radial-gradient(51.99% 51.99% at 64.17% 37.22%, rgba(85, 230, 186, 0.639) 0%, rgba(193, 229, 255, 0) 68.67%),
   radial-gradient(109.13% 109.13% at 77.27% -19.92%, rgba(85, 125, 230, 0.261) 0%, rgba(2, 39, 66, 0) 69.98%),
   radial-gradient(46.04% 46.04% at 26.85% 43.18%, rgba(255, 230, 0, 0.5) 0%, rgba(103, 191, 255, 0) 69.98%),

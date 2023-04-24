@@ -26,6 +26,11 @@ const routes: Routes = [
   {
     path: 'material',
     component: MaterialDidaticoComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'login',
+    pathMatch: 'full'
   }
 ];
 

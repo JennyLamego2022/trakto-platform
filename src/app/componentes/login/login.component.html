@@ -1,7 +1,7 @@
 <main>
   <form action="" class="container" (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
     <figure>
-      <img src="../../../assets/img/Logo.svg" alt="Logo Trakto">
+      <img src="assets/img/Logo.svg" alt="Logo Trakto">
     </figure>
     <section class="dados">
       <p>Olá, faça login em sua conta.</p>
@@ -31,7 +31,7 @@
       </div>
     </section>
     <div class="btn">
-      <button type="submit" (click)="trocarTexto()" ><img src = "../../../assets/img/Ellipse 1121.svg" alt="Elipse" class="elipse" [ngClass]="{'elipse': botaoAtivo, 'elipse-ativo': !botaoAtivo}">{{ textBtn }}</button>
+      <button type="submit" (click)="trocarTexto()" ><img src ="assets/img/Ellipse 1121.svg" alt="Elipse" class="elipse" [ngClass]="{'elipse': botaoAtivo, 'elipse-ativo': !botaoAtivo}">{{ textBtn }}</button>
     </div>
   </form>
 </main>
