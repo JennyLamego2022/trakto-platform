@@ -9,6 +9,9 @@ import { AberturaComponent } from './componentes/abertura/abertura.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { DatePipe } from '@angular/common';
 import { MaterialDidaticoComponent } from './componentes/material-didatico/material-didatico.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './api.service';
+
 
 @NgModule({
   declarations: [
@@ -23,9 +26,12 @@ import { MaterialDidaticoComponent } from './componentes/material-didatico/mater
     AppRoutingModule,
     ReactiveFormsModule,
     DatePipe,
+    HttpClientModule,
+   
+
 
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

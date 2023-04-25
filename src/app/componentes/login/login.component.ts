@@ -1,3 +1,4 @@
+import { ApiService } from './../../api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -10,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   momentForm!: FormGroup
 
-  constructor() {}
+  constructor( private ApiService: ApiService) {}
 
   ngOnInit(): void {
     this.momentForm = new FormGroup({
@@ -69,11 +70,13 @@ export class LoginComponent implements OnInit {
   botaoAtivo = true;
 
 
-  trocarTexto(){
+  entrar(){
     if (this.momentForm.valid){
       this.textBtn = 'Entrando...';
       this.botaoAtivo = !this.botaoAtivo;
 
+      this.ApiService.logar;
     }
   }
+
 }
