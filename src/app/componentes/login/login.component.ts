@@ -11,7 +11,8 @@ export class LoginComponent implements OnInit {
 
   momentForm!: FormGroup;
  
-  constructor( private ApiService: ApiService) {}
+  constructor( 
+    private ApiService: ApiService) {}
 
   ngOnInit(): void {
     this.momentForm = new FormGroup({
@@ -29,12 +30,11 @@ export class LoginComponent implements OnInit {
     return this.momentForm.get('senha')!;
   }
 
-
   submit() {
     if (this.momentForm.invalid) {
       return ;
     }
-  console.log("Enviou formulário")
+ 
 }
 
 
@@ -69,8 +69,6 @@ export class LoginComponent implements OnInit {
   textBtn = 'Entrar'
   botaoAtivo = true;
 
-
-
   entrar(){
     if (this.momentForm.valid){
       this.textBtn = 'Entrando...';
@@ -81,16 +79,9 @@ export class LoginComponent implements OnInit {
       console.log(inputEmail!.value)
       
       this.ApiService.logar(inputEmail!, inputSenha!);
-      console.log(this.ApiService.logar(inputEmail!, inputSenha!))
+      console.log(this.ApiService.logar(inputEmail!, inputSenha!));
+      
     }
   }
-
-  // onSubmit(event: Event) {
-  //   event.preventDefault();
-  //   this.ApiService.logar('login', 'senha').subscribe(
-  //     (response) => console.log('Logged in successfully'),
-  //     (error) => console.error(error)
-  //   );
-  // }
 
 }
