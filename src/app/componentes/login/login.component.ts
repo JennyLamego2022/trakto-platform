@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
     if (this.momentForm.invalid) {
       return ;
     }
- 
 }
 
 
@@ -80,7 +79,6 @@ export class LoginComponent implements OnInit {
       
       this.ApiService.logar(inputEmail!, inputSenha!);
       console.log(this.ApiService.logar(inputEmail!, inputSenha!));
-      
     }
   }
 

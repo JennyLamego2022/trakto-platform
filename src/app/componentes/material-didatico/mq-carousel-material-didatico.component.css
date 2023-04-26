@@ -1,0 +1,37 @@
+@media (max-width: 660px){
+  .container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+  .conteudo{
+    margin-top: 4.75rem;
+  }
+  .material{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 3.5rem 1.5rem;
+    padding-bottom: 2.8125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .info-header, .btn {
+    text-align: center;
+  }
+
+  .header p:nth-child(1) {
+    justify-content: center;
+  }
+
+  .btn{
+    justify-content: center;
+  }
+  .section-card {
+    padding: 1px 1.5rem;
+  }
+}

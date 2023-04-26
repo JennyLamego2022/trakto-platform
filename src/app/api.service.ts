@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 
@@ -62,6 +62,5 @@ export class ApiService {
         alert("Erro ao fazer login, confira seus dados.");
         console.log('erro de Login', error)
       });
-        console.log('service');
   }
 }

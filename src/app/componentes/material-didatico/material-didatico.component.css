@@ -1,32 +1,36 @@
-body{
+/* body{
   width: 100%;
   height: 100%;
   background-color: red;
-}
+} */
 
 main{
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background-color: var(--bg-login-color);
 }
 
 .container{
   width: 100%;
   height: 100%;
-  background-color: var(--bg-material-color);
+  background-color: var(--bg-login-color);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  /* background-color: #16984C; */
 }
 
 .conteudo{
-  width: auto;
-  background-color: blue;
-  position: absolute;
-  top: 4.75rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  /* position: absolute; */
+  /* top: 4.75rem;
   left: 4rem;
-  right: 4rem;
+  right: 4rem; */
   padding-bottom: 4rem;
   margin-top: 2rem;
 }

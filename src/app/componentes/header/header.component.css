@@ -17,9 +17,11 @@ main{
 
 }
 
+
 .logo{
   padding-left: 4.0625rem;
   padding-top: 0.876875rem;
+  cursor: pointer;
 }
 
 hr{

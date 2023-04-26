@@ -1,5 +1,4 @@
 .material{
-  /* border: 1px solid red; */
   background-color: var(--bg-input-color);
   width: 100%;
   font-family: var(--font-family-primary);
@@ -7,8 +6,6 @@
 }
 
 .header{
-  /* border: 1px solid red; */
-  /* background-color: blueviolet; */
   width: auto;
   height: 100%;
   padding: 3.5rem 4.5rem;
@@ -20,14 +17,13 @@
 }
 
 .info-header, .btn{
-  /* border: 1px solid red; */
   width: 100%;
   height: 100%;
 }
 
 .header p{
   font-size: 1rem;
-  color: #7183A6;
+  color: var(--font-header-material-color);
   font-weight: 500;
   line-height: 19px;
 }
@@ -41,23 +37,21 @@
 .btn-cont {
   border: none;
   background-color: transparent;
-  color: #7183A6;
+  color: var(--font-header-material-color);
   cursor: pointer;
 }
 
 .btn-data{
-  background-color: #E4EBFB;
+  background-color: var(--font-header-light-color);
   font-size: 1rem;
-  color: #7183A6;
+  color: var(--font-header-material-color);
   font-weight: 500;
-  line-height: 19px;
-  padding: 4px 8px;
-  border-radius: 500px;
+  line-height: 1.1875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 31.25rem;
   border: none;
   cursor: pointer;
 }
-
-
 
 .header p:nth-child(2){
   font-weight: 400;
@@ -66,9 +60,9 @@
 .title-carousel{
   font-family: var(--font-family-primary);
   font-size:24px;
-  color: #354564;
+  color: var(--font-carousel-color);
   font-weight: 700;
-  line-height: 28px;
+  line-height: 1.75rem;
   padding-bottom: 0.5rem;
   padding-top: 1rem;
 }
@@ -79,15 +73,15 @@
   background-color: transparent;
 }
 .btn button:hover{
-  background-color: #E4EBFB;
+  background-color: var(--font-header-light-color);
 }
 
 .btn button{
-  padding: 1rem 14px;
-  border: 1px solid #4743FF;
-  border-radius: 8px;
-  color:#4743FF;
-  font-size: 16px;
+  padding: 1rem 0.875rem;
+  border: 1px solid var(--font-btn-border-color);
+  border-radius: 0.5rem;
+  color: var(--font-btn-border-color);
+  font-size: 1rem;
   font-weight: 500;
   background-color: transparent;
   cursor:pointer;
@@ -98,25 +92,23 @@
   flex-direction: row;
   gap: 2rem;
   padding: 0 4.5rem;
-  max-width: 1792px;
+  max-width: 112rem;
   overflow: scroll;
   scroll-behavior: smooth;
-  /* background-color: #7183A6; */
 }
 
 .card{
-  max-width: 310px;
-  padding-bottom: 84px;
+  max-width: 19.375rem;
+  padding-bottom: 5.25rem;
   cursor: pointer;
 }
 
 .card figcaption{
-  height: 46px;
-  /* border: 1px solid red; */
+  height: 2.875rem;
   margin-top: 1rem;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: #354564;
+  color: var(--font-carousel-color);
 
 }
 
@@ -125,15 +117,15 @@ a{
   display: flex;
   align-items: center;
  gap: 8px;
- color: #FF0100;
+ color: var(--font-btn-video-color);
 }
 
 
 #btn-video{
   display:flex;
   align-items: center;
-  gap: 8px;
-  border: 1px solid #FF0100;
+  gap: 0.5rem;
+  border: 1px solid var(--font-btn-video-color);
 }
 
 
