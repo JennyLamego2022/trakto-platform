@@ -42,14 +42,14 @@ export class ApiService {
             
     }
 
-    getUserData() {
-      // adicionar o token como um cabeçalho de autorização
-      console
-      const headers = new HttpHeaders().set('token', `Bearer ${access_token}`);
+    // getUserData() {
+    //   // adicionar o token como um cabeçalho de autorização
+    //   console
+    //   const headers = new HttpHeaders().set('token', `Bearer ${access_token}`);
   
-      // fazer uma chamada para a API com o token como um cabeçalho
-      return this._http.get('https://api.trakto.io/document/${loginResponse.id}', { headers });
-    }
+    //   // fazer uma chamada para a API com o token como um cabeçalho
+    //   return this._http.get('https://api.trakto.io/document/${loginResponse.id}', { headers });
+    // }
 }
 
 // @Injectable({
