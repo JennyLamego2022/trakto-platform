@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 
@@ -22,16 +22,33 @@ export class ApiService {
       private _router: Router
     ) {}
 
-    public logar(login: string, senha: string): void {
+
+    public logar(login: HTMLInputElement, senha: HTMLInputElement): void {
           const user = {
-            email: "dev-master@trakto.io",
-            password: "K8k!fULUY3w.MK"
+            email: login.value,
+            password: senha.value,
           }
 
           this._http
+                // .post<Login>(`${this.apiURL}/auth/signin`,{login, senha })
                 .post<Login>(`${this.apiURL}/auth/signin`,user)
-                .subscribe(loginResponse => console.log(loginResponse));
+                .subscribe(loginResponse => {
+                  console.log(loginResponse)
+                  console.log(loginResponse.access_token)
+              
+                });
                 console.log('service')
+
+            
+    }
+
+    getUserData() {
+      // adicionar o token como um cabeçalho de autorização
+      console
+      const headers = new HttpHeaders().set('token', `Bearer ${access_token}`);
+  
+      // fazer uma chamada para a API com o token como um cabeçalho
+      return this._http.get('https://api.trakto.io/document/${loginResponse.id}', { headers });
     }
 }
 

@@ -9,8 +9,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  momentForm!: FormGroup
-
+  momentForm!: FormGroup;
+ 
   constructor( private ApiService: ApiService) {}
 
   ngOnInit(): void {
@@ -70,13 +70,27 @@ export class LoginComponent implements OnInit {
   botaoAtivo = true;
 
 
+
   entrar(){
     if (this.momentForm.valid){
       this.textBtn = 'Entrando...';
       this.botaoAtivo = !this.botaoAtivo;
 
-      this.ApiService.logar;
+      const inputEmail: HTMLInputElement | null = document.querySelector('#input1');
+      const inputSenha: HTMLInputElement | null = document.querySelector('#input2');
+      console.log(inputEmail!.value)
+      
+      this.ApiService.logar(inputEmail!, inputSenha!);
+      console.log(this.ApiService.logar(inputEmail!, inputSenha!))
     }
   }
+
+  // onSubmit(event: Event) {
+  //   event.preventDefault();
+  //   this.ApiService.logar('login', 'senha').subscribe(
+  //     (response) => console.log('Logged in successfully'),
+  //     (error) => console.error(error)
+  //   );
+  // }
 
 }

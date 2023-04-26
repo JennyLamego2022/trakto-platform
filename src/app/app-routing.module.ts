@@ -4,6 +4,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { AberturaComponent } from './componentes/abertura/abertura.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { MaterialDidaticoComponent } from './componentes/material-didatico/material-didatico.component';
+import { VerTodosComponent } from './componentes/ver-todos/ver-todos.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'material',
     component: MaterialDidaticoComponent
+  },
+  {
+    path: 'todos',
+    component: VerTodosComponent
   },
   {
     path: '**',

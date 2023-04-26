@@ -4,13 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AberturaComponent } from './componentes/abertura/abertura.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { DatePipe } from '@angular/common';
 import { MaterialDidaticoComponent } from './componentes/material-didatico/material-didatico.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api.service';
+import { VerTodosComponent } from './componentes/ver-todos/ver-todos.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ApiService } from './api.service';
     LoginComponent,
     AberturaComponent,
     HeaderComponent,
-    MaterialDidaticoComponent
+    MaterialDidaticoComponent,
+    VerTodosComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import { ApiService } from './api.service';
     ReactiveFormsModule,
     DatePipe,
     HttpClientModule,
+    FormsModule
    
 
 
