@@ -1,3 +1,4 @@
+import { ApiService } from 'src/app/api.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -9,9 +10,13 @@ export class MaterialDidaticoComponent implements OnInit {
 
   @ViewChild('myScrollableElement', { static:false}) myScrollableElement:any;
 
-  constructor(){}
+  constructor(private ApiService: ApiService){}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.ApiService.getUserData();
+
+  }
 
 
   onButtonClick(){
@@ -23,6 +28,8 @@ export class MaterialDidaticoComponent implements OnInit {
     const scrollable = this.myScrollableElement.nativeElement;
     scrollable.scrollLeft -= 1000;
     }
+
+    
 
   }
 

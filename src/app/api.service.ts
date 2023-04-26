@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
 
 type Login ={
   firstName: string;
-  lastName: string;
-  email: string
+  email: string;
   access_token: string;
+  id: string;
 }
 
 @Injectable({
@@ -23,34 +23,85 @@ export class ApiService {
     ) {}
 
 
-    public logar(login: HTMLInputElement, senha: HTMLInputElement): void {
-          const user = {
-            email: login.value,
-            password: senha.value,
-          }
-
-          this._http
-                // .post<Login>(`${this.apiURL}/auth/signin`,{login, senha })
-                .post<Login>(`${this.apiURL}/auth/signin`,user)
-                .subscribe(loginResponse => {
-                  console.log(loginResponse)
-                  console.log(loginResponse.access_token)
-              
-                });
-                console.log('service')
-
-            
-    }
-
-    // getUserData() {
+    // getUserData(access_token:string) {
     //   // adicionar o token como um cabeçalho de autorização
-    //   console
+    
     //   const headers = new HttpHeaders().set('token', `Bearer ${access_token}`);
+    //   const infoTeste = {
+    //     headers: { Authorization: `Bearer ${access_token}` },
+    //   }
+    //   // console.log(headers)
   
     //   // fazer uma chamada para a API com o token como um cabeçalho
-    //   return this._http.get('https://api.trakto.io/document/${loginResponse.id}', { headers });
+    //   return this._http.get('https://api.trakto.io/document?total_per_page=10&order_by=title&order_orientation=desc', infoTeste)
+    //   .subscribe(result => {
+    //   console.log(result)
+      
+    //   })
     // }
+
+
+
+
+    // public logar(login: HTMLInputElement, senha: HTMLInputElement): void {
+    //       const user = {
+    //         email: login.value,
+    //         password: senha.value,
+    //       }
+    //       this._http
+    //             .post<Login>(`${this.apiURL}/auth/signin`,user)
+    //             .subscribe(loginResponse => {
+    //               const returnToken = this.getUserData(loginResponse.access_token)
+    //             });
+    //             console.log('service')
+    //   }
+
+
+
+
+
+    saveData(data: Login): void {
+      localStorage.setItem('userInformations', JSON.stringify(data));
+    }
+    
+    recoverData(): Login | null {
+      const userInformations = localStorage.getItem('userInformations');
+      if (!userInformations) return null;
+      return JSON.parse(userInformations) as Login;
+    }
+
+    
+      getUserData() {
+        const userData = this.recoverData() as Login;
+        const headers = { Authorization: `Bearer ${userData.access_token}` };
+        return this._http.get('https://api.trakto.io/document?total_per_page=10&order_by=title&order_orientation=desc', { headers })
+        .subscribe(result => {
+        console.log(result);
+        });
+  }
+  
+  
+  
+  public logar(login: HTMLInputElement, senha: HTMLInputElement): void {
+            const user = {
+              email: login.value,
+              password: senha.value,
+            }
+            this._http
+                  .post<Login>(`${this.apiURL}/auth/signin`, user)
+                  .subscribe(loginResponse => {
+                   const { firstName, email, access_token, id } = loginResponse;
+                    this.saveData({ firstName, email, access_token, id });
+                    
+                  });
+                  console.log('service');
+  }
+
+ 
 }
+
+// const token = localStorage
+// header
 
 // @Injectable({
 //   providedIn: 'root'

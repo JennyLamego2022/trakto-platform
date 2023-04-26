@@ -13,17 +13,14 @@
         <img src="assets/img/notification.svg" alt="Símbolo notificação">
       </figure>
       <hr>
-
       <div class="avatar">
         <button class="btn-avatar"></button>
         <span class="material-symbols-outlined icon-avatar">
           arrow_drop_down
         </span>
-
         <span (click)="dropdownToggle()" class="material-symbols-outlined icon-avatar-dropdown">
           menu
         </span>
-
         <div class="dropdown" [ngClass]="{'dropdown': botaoAtivo, 'dropdown-ativo': !botaoAtivo}">
           <div class="data-dropdown">
             <img src="assets/img/calendar.svg" alt="Símbolo calendário">

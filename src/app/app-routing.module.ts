@@ -21,10 +21,6 @@ const routes: Routes = [
     component: AberturaComponent
   },
   {
-    path: 'header',
-    component: HeaderComponent
-  },
-  {
     path: 'material',
     component: MaterialDidaticoComponent
   },

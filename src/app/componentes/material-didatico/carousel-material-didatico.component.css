@@ -63,7 +63,7 @@
   font-weight: 400;
 }
 
-.title{
+.title-carousel{
   font-family: var(--font-family-primary);
   font-size:24px;
   color: #354564;
@@ -120,13 +120,20 @@
 
 }
 
+a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+ gap: 8px;
+ color: #FF0100;
+}
+
 
 #btn-video{
   display:flex;
   align-items: center;
   gap: 8px;
   border: 1px solid #FF0100;
-  color: #FF0100;
 }
 
 
