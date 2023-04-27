@@ -9,10 +9,15 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   botaoAtivo = true;
+  botaoAtivo1 = true;
 
+  dropdownToggle1(){
+    this.botaoAtivo1 = !this.botaoAtivo1;
+    console.log('teste')
+  }
   dropdownToggle(){
     this.botaoAtivo = !this.botaoAtivo;
-  
+    console.log('teste')
   }
 
 

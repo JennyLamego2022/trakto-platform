@@ -1,16 +1,15 @@
 <main>
   <div class="container">
     <figure class="logo" [routerLink]="['/abertura']" routerLinkActive="router-link-active" >
-      <img src="assets/img/logo_light.svg" alt="Logo Trakto">
+      <img id="logo" src="assets/img/logo_light.svg" alt="Logo Trakto">
       <button class="btn-header">
         <img src="assets/img/logout.svg" alt="Simbolo Logout">
-        Trocar de ambiente
+        <p> Trocar de ambiente </p>
       </button>
-      
+
     </figure>
     <section class="nav">
       <figure class="data">
-        <!-- <img src="assets/img/calendar.svg" alt="Símbolo calendário"> -->
         <span class="material-symbols-outlined">
               calendar_month
               </span>
@@ -18,7 +17,6 @@
       </figure>
       <hr>
       <figure class="notificacao">
-        <!-- <img src="assets/img/notification.svg" alt="Símbolo notificação"> -->
         <span class="material-symbols-outlined">
           notifications
           </span>
@@ -26,21 +24,39 @@
       <hr>
       <div class="avatar">
         <button class="btn-avatar"></button>
-        <span class="material-symbols-outlined icon-avatar">
+        <span (click)="dropdownToggle1()" class="material-symbols-outlined icon-avatar">
           arrow_drop_down
         </span>
         <span (click)="dropdownToggle()" class="material-symbols-outlined icon-avatar-dropdown">
           menu
         </span>
+
+        <div class="menu-dropdown" [ngClass]="{'menu-dropdown': botaoAtivo1, 'menu-dropdown-ativo': !botaoAtivo1}">
+          <a href="/material">Material didático</a>
+          <a href="#">Quiz</a>
+          <a href="#">Desenho</a>
+          <a href="https://www.youtube.com/@Trakto" target="_blank">Youtube</a>
+        </div>
+
         <div class="dropdown" [ngClass]="{'dropdown': botaoAtivo, 'dropdown-ativo': !botaoAtivo}">
           <div class="data-dropdown">
-            <img src="assets/img/calendar.svg" alt="Símbolo calendário">
-            
+            <span class="material-symbols-outlined">
+              calendar_month
+              </span>
+
             <p>{{ today }}</p>
           </div>
           <div class="notificacao-dropdown">
-            <img src="assets/img/notification.svg" alt="Símbolo notificação">
+            <span class="material-symbols-outlined">
+              notifications
+              </span>
             <p>Notificação</p>
+          </div>
+          <div class="menu">
+            <a href="/material">Material didático</a>
+            <a href="#">Quiz</a>
+            <a href="#">Desenho</a>
+            <a href="https://www.youtube.com/@Trakto" target="_blank">Youtube</a>
           </div>
         </div>
       </div>

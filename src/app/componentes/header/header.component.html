@@ -15,12 +15,20 @@
       <hr>
       <div class="avatar">
         <button class="btn-avatar"></button>
-        <span class="material-symbols-outlined icon-avatar">
+        <span (click)="dropdownToggle1()" class="material-symbols-outlined icon-avatar">
           arrow_drop_down
         </span>
         <span (click)="dropdownToggle()" class="material-symbols-outlined icon-avatar-dropdown">
           menu
         </span>
+
+        <div class="menu-dropdown" [ngClass]="{'menu-dropdown': botaoAtivo1, 'menu-dropdown-ativo': !botaoAtivo1}">
+          <a href="/material">Material didático</a>
+          <a href="#">Quiz</a>
+          <a href="#">Desenho</a>
+          <a href="https://www.youtube.com/@Trakto" target="_blank">Youtube</a>
+        </div>
+
         <div class="dropdown" [ngClass]="{'dropdown': botaoAtivo, 'dropdown-ativo': !botaoAtivo}">
           <div class="data-dropdown">
             <img src="assets/img/calendar.svg" alt="Símbolo calendário">
@@ -29,6 +37,13 @@
           <div class="notificacao-dropdown">
             <img src="assets/img/notification.svg" alt="Símbolo notificação">
             <p>Notificação</p>
+          </div>
+
+          <div class="menu">
+            <a href="/material">Material didático</a>
+            <a href="#">Quiz</a>
+            <a href="#">Desenho</a>
+            <a href="https://www.youtube.com/@Trakto" target="_blank">Youtube</a>
           </div>
         </div>
       </div>
