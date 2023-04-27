@@ -9,9 +9,15 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class MaterialDidaticoComponent implements OnInit {
 
   @ViewChild('myScrollableElement', { static:false}) myScrollableElement:any;
+  @ViewChild('myScrollableElement2', { static:false}) myScrollableElement2:any;
 
-  constructor(private ApiService: ApiService){}
 
+  constructor(private ApiService: ApiService){
+    
+  }
+
+
+  
   ngOnInit(): void {
 
     this.ApiService.getUserData();
@@ -26,6 +32,15 @@ export class MaterialDidaticoComponent implements OnInit {
 
   offButtonClick(){
     const scrollable = this.myScrollableElement.nativeElement;
+    scrollable.scrollLeft -= 1000;
+    }
+  onButtonClick2(){
+    const scrollable = this.myScrollableElement2.nativeElement;
+    scrollable.scrollLeft += 1000;
+    }
+
+  offButtonClick2(){
+    const scrollable = this.myScrollableElement2.nativeElement;
     scrollable.scrollLeft -= 1000;
     }
 

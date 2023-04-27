@@ -12,6 +12,7 @@ import { MaterialDidaticoComponent } from './componentes/material-didatico/mater
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api.service';
 import { VerTodosComponent } from './componentes/ver-todos/ver-todos.component';
+import { HeaderLightComponent } from './componentes/header-light/header-light.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { VerTodosComponent } from './componentes/ver-todos/ver-todos.component';
     AberturaComponent,
     HeaderComponent,
     MaterialDidaticoComponent,
-    VerTodosComponent
+    VerTodosComponent,
+    HeaderLightComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+<main>
+  <div class="container">
+    <figure class="logo" [routerLink]="['/abertura']" routerLinkActive="router-link-active" >
+      <img src="assets/img/logo_light.svg" alt="Logo Trakto">
+      <button class="btn-header">
+        <img src="assets/img/logout.svg" alt="Simbolo Logout">
+        Trocar de ambiente
+      </button>
+      
+    </figure>
+    <section class="nav">
+      <figure class="data">
+        <!-- <img src="assets/img/calendar.svg" alt="Símbolo calendário"> -->
+        <span class="material-symbols-outlined">
+              calendar_month
+              </span>
+        <p>{{today}}</p>
+      </figure>
+      <hr>
+      <figure class="notificacao">
+        <!-- <img src="assets/img/notification.svg" alt="Símbolo notificação"> -->
+        <span class="material-symbols-outlined">
+          notifications
+          </span>
+      </figure>
+      <hr>
+      <div class="avatar">
+        <button class="btn-avatar"></button>
+        <span class="material-symbols-outlined icon-avatar">
+          arrow_drop_down
+        </span>
+        <span (click)="dropdownToggle()" class="material-symbols-outlined icon-avatar-dropdown">
+          menu
+        </span>
+        <div class="dropdown" [ngClass]="{'dropdown': botaoAtivo, 'dropdown-ativo': !botaoAtivo}">
+          <div class="data-dropdown">
+            <img src="assets/img/calendar.svg" alt="Símbolo calendário">
+            
+            <p>{{ today }}</p>
+          </div>
+          <div class="notificacao-dropdown">
+            <img src="assets/img/notification.svg" alt="Símbolo notificação">
+            <p>Notificação</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
