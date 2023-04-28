@@ -103,4 +103,19 @@
 }
 
 
+@media (max-width: 425px){
+  .header{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .section-card{
+    padding-right: 0;
+
+    padding-left: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
 
