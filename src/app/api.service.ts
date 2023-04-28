@@ -81,14 +81,14 @@ export class ApiService {
   }
 
 
-  getTemplates10(design: string, limit: number): Observable<{ title: string, image: string }[]> {
+  getTemplates10(design: string, limit: number): Observable<{ title: string, image: string, id: string }[]> {
     const userData = this.recoverData() as Login;
     const headers = { Authorization: `Bearer ${userData.access_token}`, Accept: 'application/json' };
 
     return this._http.get<{ data: Document[] }>('https://api.trakto.io/document?total_per_page=10&order_by=title&order_orientation=desc&title=', { headers })
       .pipe(map(result => {
         const data = result.data;
-        return data.map(item => ({ title: item.title, image: item.thumbs.high }));
+        return data.map(item => ({ title: item.title, image: item.thumbs.high, id: item.id }));
       })).pipe(map(items => items.slice(0, 10)));
   }
 

@@ -16,7 +16,7 @@ export class MaterialDidaticoComponent implements OnInit {
   @ViewChild('myScrollableElement2', { static:false}) myScrollableElement2:any;
 
   titulo: string | undefined;
-  templates?: { title: string; image: string; }[];
+  templates?: { title: string; image: string; id: string }[];
 
   constructor(
     private ApiService: ApiService,
@@ -63,6 +63,12 @@ export class MaterialDidaticoComponent implements OnInit {
     const scrollable = this.myScrollableElement2.nativeElement;
     scrollable.scrollLeft -= 1000;
     }
+
+
+    openEditor(id: string): void {
+      window.open(`https://editor.trakto.io/presentation/p/${id}`, '_blank');
+    }
+
 
   }
 

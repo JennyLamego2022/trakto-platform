@@ -41,12 +41,13 @@
         </div>
 
         <div class="section-card" #myScrollableElement style="overflow-x: scroll;">
-          <div class="card" *ngFor="let template of templates ">
+          <div class="card" *ngFor="let template of templates" (click)="openEditor(template.id)">
             <img [src]="template.image" alt="{{ template.image }}">
             <h3 class="listaTemplate">{{ template.title }}</h3>
           </div>
         </div>
       </section>
+
       <section class="material">
         <div class="header">
           <div class="info-header">
