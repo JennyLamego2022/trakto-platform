@@ -11,7 +11,7 @@
 
       <div class="section-card" #myScrollableElement style="overflow-x: scroll;">
         <div class="card" *ngFor="let template of templates">
-          <img [src]="template.title" alt="{{ template.title }}">
+          <img [src]="template.image" alt="{{ template.image }}">
           <h3 class="listaTemplate">{{ template.title }}</h3>
         </div>
       </div>

@@ -12,7 +12,7 @@ import { ApiService, Design } from 'src/app/api.service'
 
 export class VerTodosComponent implements OnInit{
 
- 
+
   // templates: { title: string; thumbnailUrl: string; }[] | undefined;
 
   templates: { title: string; image: string; }[] | undefined;
@@ -33,16 +33,17 @@ export class VerTodosComponent implements OnInit{
 
 
 // ______________________________FUNCAO CORRETA____________________
-    this.ApiService.getTemplates('design').subscribe(result => {
-      this.templates = result;
-    });
+    // this.ApiService.getTemplates('design').subscribe(result => {
+    //   this.templates = result;
+    //   console.log(result)
+    // });
 
 
 // ____________ BOA OPÇÃO____________________________________
-// this.ApiService.getTemplates('design').subscribe(result => {
-//   this.templates = result;
-//   console.log(this.templates)
-// });
+this.ApiService.getTemplates('design').subscribe(result => {
+  this.templates = result;
+  console.log(this.templates)
+});
 
 // ________________________________________________________________
 

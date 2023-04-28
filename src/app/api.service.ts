@@ -19,6 +19,17 @@ export interface Design {
   updated_at: string;
 }
 
+export interface Document {
+  id: string;
+  title: string;
+  thumbs: {
+    raw: string;
+    medium: string;
+    high: string;
+    low: string;
+  };
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -58,17 +69,35 @@ export class ApiService {
   }
 
 
-// ___________________________________ FUNCIONANDO DIREITO______________________________________
-getTemplates(design: string): Observable<{ title: string, image: string }[]> {
-  const userData = this.recoverData() as Login;
-  const headers = { Authorization: `Bearer ${userData.access_token}`, Accept: 'application/json' };
 
-  return this._http.get<{ data: { thumbs: string, id: string, title: string }[] }>('https://api.trakto.io/document?total_per_page=10&order_by=title&order_orientation=desc&title=', { headers })
-    .pipe(map(result => {
-      const data = result.data;
-      return data.map(item => ({ title: item.title, image: item.thumbs }));
-    }));
-}
+
+  getTemplates(design: string): Observable<{ title: string, image: string }[]> {
+    const userData = this.recoverData() as Login;
+    const headers = { Authorization: `Bearer ${userData.access_token}`, Accept: 'application/json' };
+
+    return this._http.get<{ data: Document[] }>('https://api.trakto.io/document?total_per_page=10&order_by=title&order_orientation=desc&title=', { headers })
+      .pipe(map(result => {
+        const data = result.data;
+        return data.map(item => ({ title: item.title, image: item.thumbs.high }));
+      }));
+  }
+
+
+
+
+
+// ___________________________________ FUNCIONANDO DIREITO______________________________________
+// getTemplates(design: string): Observable<{ title: string, image: string }[]> {
+//   const userData = this.recoverData() as Login;
+//   const headers = { Authorization: `Bearer ${userData.access_token}`, Accept: 'application/json' };
+
+//   return this._http.get<{ data: { thumbs: string, id: string, title: string }[] }>('https://api.trakto.io/document?total_per_page=10&order_by=title&order_orientation=desc&title=', { headers })
+//     .pipe(map(result => {
+//       const data = result.data;
+//       return data.map(item => ({ title: item.title, image: item.thumbs}));
+
+//     }));
+// }
 
 // _______________________BOA OPÇÃO_____________________
 
