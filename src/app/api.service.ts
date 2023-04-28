@@ -69,8 +69,6 @@ export class ApiService {
   }
 
 
-
-
   getTemplates(design: string): Observable<{ title: string, image: string }[]> {
     const userData = this.recoverData() as Login;
     const headers = { Authorization: `Bearer ${userData.access_token}`, Accept: 'application/json' };
@@ -83,42 +81,17 @@ export class ApiService {
   }
 
 
+  getTemplates10(design: string, limit: number): Observable<{ title: string, image: string }[]> {
+    const userData = this.recoverData() as Login;
+    const headers = { Authorization: `Bearer ${userData.access_token}`, Accept: 'application/json' };
 
+    return this._http.get<{ data: Document[] }>('https://api.trakto.io/document?total_per_page=10&order_by=title&order_orientation=desc&title=', { headers })
+      .pipe(map(result => {
+        const data = result.data;
+        return data.map(item => ({ title: item.title, image: item.thumbs.high }));
+      })).pipe(map(items => items.slice(0, 10)));
+  }
 
-
-// ___________________________________ FUNCIONANDO DIREITO______________________________________
-// getTemplates(design: string): Observable<{ title: string, image: string }[]> {
-//   const userData = this.recoverData() as Login;
-//   const headers = { Authorization: `Bearer ${userData.access_token}`, Accept: 'application/json' };
-
-//   return this._http.get<{ data: { thumbs: string, id: string, title: string }[] }>('https://api.trakto.io/document?total_per_page=10&order_by=title&order_orientation=desc&title=', { headers })
-//     .pipe(map(result => {
-//       const data = result.data;
-//       return data.map(item => ({ title: item.title, image: item.thumbs}));
-
-//     }));
-// }
-
-// _______________________BOA OPÇÃO_____________________
-
-// getTemplates(design: string): Observable<{ title: string, thumbnailUrl: string }[]> {
-//   const userData = this.recoverData() as Login;
-//   const headers = { Authorization: `Bearer ${userData.access_token}`, Accept: 'application/json' };
-
-//   return this._http.get<{
-//     data: { title: string, thumbnail: { low: string } }[]
-//   }>(`https://api.trakto.io/document?total_per_page=10&order_by=title&order_orientation=desc&title=${design}`, { headers })
-//     .pipe(map(result => {
-//       const data = result.data;
-//       return data.map(item => ({
-//         title: item.title,
-//         thumbnailUrl: item.thumbnail.low
-
-//       }) );
-//     }));
-// }
-
-// _________________________________________________________
 
 
   public logar(login: HTMLInputElement, senha: HTMLInputElement): void {

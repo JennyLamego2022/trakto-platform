@@ -41,56 +41,10 @@
         </div>
 
         <div class="section-card" #myScrollableElement style="overflow-x: scroll;">
-
-              <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <figcaption>Aula 1: Fono-ortografia</figcaption>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-2.svg" alt="Tela inicial do curso">
-                <figcaption  >Aula 2: Protocolos de Leitura</figcaption>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-3.svg" alt="Tela inicial do curso">
-                <figcaption>Aula 3: Corpo Humano</figcaption>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-4.svg" alt="Tela inicial do curso">
-                <figcaption>Aula 4: Morfologia</figcaption>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-5.svg" alt="Tela inicial do curso">
-                <figcaption>Aula 5: Constelações & Mapas Celestial</figcaption>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-1.svg" alt="Tela inicial do curso">
-                <figcaption>Aula 6: Fono-ortografia</figcaption>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-2.svg" alt="Tela inicial do curso">
-                <figcaption>Aula 7: Protocolos de Leitura</figcaption>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-3.svg" alt="Tela inicial do curso">
-                <figcaption>Aula 8: Corpo Humano</figcaption>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-4.svg" alt="Tela inicial do curso">
-                <figcaption>Aula 9: Morfologia</figcaption>
-              </div>
-
-              <div class="card">
-                <img src="assets/img/aula-5.svg" alt="Tela inicial do curso">
-                <figcaption>Constelações & Mapas Celestial</figcaption>
-              </div>
+          <div class="card" *ngFor="let template of templates ">
+            <img [src]="template.image" alt="{{ template.image }}">
+            <h3 class="listaTemplate">{{ template.title }}</h3>
+          </div>
         </div>
       </section>
       <section class="material">

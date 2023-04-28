@@ -90,6 +90,7 @@
 .section-card{
   display: flex;
   flex-direction: row;
+  /* flex-wrap: wrap; */
   gap: 2rem;
   padding: 0 4.5rem;
   max-width: 112rem;
@@ -98,18 +99,37 @@
 }
 
 .card{
-  max-width: 19.375rem;
+  /* max-width: 19.375rem;
   padding-bottom: 5.25rem;
+  cursor: pointer; */
+
+  width: auto;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding-bottom: 5.25rem;
 }
 
-.card figcaption{
-  height: 2.875rem;
+.card img{
+  /* height: 2.875rem; */
   margin-top: 1rem;
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--font-carousel-color);
+  width: 19.375rem;
+  height: 10.875rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
 
+}
+
+.listaTemplate{
+  display: flex;
+  flex-direction: row;
+  width: 19.375rem;
 }
 
 a{
