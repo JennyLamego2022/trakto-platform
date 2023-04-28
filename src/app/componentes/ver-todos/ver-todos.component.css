@@ -1,4 +1,4 @@
-/* main{
+ main{
   width: 100vw;
   height: 100vh;
   background-color: var(--bg-login-color);
@@ -8,27 +8,41 @@
   width: 100%;
   height: 100%;
   background-color: var(--bg-material-color);
-  position: relative;
+  /* position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-} */
+  align-items: center; */
+}
+
+
+.listaTemplate{
+  display: flex;
+  flex-direction: row;
+  width: 310px;
+  border: 1px solid red;
+}
 
 .material{
   border: 1px solid red;
-  background-color: var(--bg-input-color);
+  /* background-color: var(--bg-input-color); */
+  background-color: #F5F5F5;
   width: 100%;
+  height: 100%;
   font-family: var(--font-family-primary);
-  /* margin-top: 48px; */
+  padding-top: 76px;
 }
 
 .header{
   /* border: 1px solid red; */
-  /* background-color: blueviolet; */
+  background-color: #FFFFFF;
   width: auto;
-  height: 100%;
+  /* height: 100%; */
   padding: 3.5rem 4.5rem;
   padding-bottom: 2.8125rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 32px;
+
 
   display: flex;
   flex-direction: row;
@@ -38,7 +52,8 @@
 .info-header{
   /* border: 1px solid red; */
   width: 100%;
-  height: 100%;
+  height: auto;
+  /* background-color: yellow; */
 }
 
 .header p{
@@ -112,18 +127,39 @@
 .section-card{
   display: flex;
   flex-direction: row;
+  /* justify-content: space-between; */
   gap: 2rem;
   padding: 0 4.5rem;
   max-width: 1792px;
   overflow: scroll;
   scroll-behavior: smooth;
   /* background-color: #7183A6; */
+  background-color: #FFFFFF;
+    margin: 3.5rem 4rem;
+    flex-wrap: wrap;
+    margin-top: 0;
+    justify-content: center;
 }
 
 .card{
-  max-width: 310px;
-  padding-bottom: 84px;
-  cursor: pointer;
+  width: auto;
+    padding-bottom: 84px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border: 1px solid red;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding-bottom: 4rem;
+
+  /* align-content: space-around; */
+}
+
+.card img{
+  width: 310px;
+  height: 174px;
+  border: 1px solid red;
 }
 
 .card figcaption{
@@ -144,4 +180,7 @@
   border: 1px solid #FF0100;
   color: #FF0100;
 }
+
+/* templates: { title: string, image: string }[] = []; */
+
 
