@@ -38,8 +38,8 @@ Todas as informações sobre a API estão na collectio. do postman na lista de l
 <h3> :camera: Página Mobile e Página Desktop</h3>
 
 <div align="center">
-<img  src = "https://user-images.githubusercontent.com/97410860/235030989-4df5705d-b8c7-4c99-bb5b-b7a1dafce8db.png" width = "375px"/>
-<img  src = "https://user-images.githubusercontent.com/97410860/235030998-948cb3cd-9fe4-4b71-bbd3-80e442134e37.png" width = "375px"/>
+<img  src = "https://user-images.githubusercontent.com/97410860/235030989-4df5705d-b8c7-4c99-bb5b-b7a1dafce8db.png" width = "300px"/>
+<img  src = "https://user-images.githubusercontent.com/97410860/235030998-948cb3cd-9fe4-4b71-bbd3-80e442134e37.png" width = "300px"/>
 <img  src = "https://user-images.githubusercontent.com/97410860/235031005-34a46669-6231-43e7-877e-829a15c5caaf.png" width = "146.6px"/>
 </div>
 
